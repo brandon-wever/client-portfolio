@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginPageComponent } from './login-page.component';
 import { ButtonModule } from '../../foundational/button/button.module';
+import { FormFieldModule } from '../../foundational/form-field/form-field.module';
 
 
 
@@ -14,7 +15,8 @@ import { ButtonModule } from '../../foundational/button/button.module';
   ],
   imports: [
     CommonModule,
-    ButtonModule
+    ButtonModule,
+    FormFieldModule
   ]
 })
 export class LoginPageModule { }
