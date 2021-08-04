@@ -10,8 +10,9 @@ export class ButtonComponent implements OnInit {
 
   @Input() label: string = 'Button Label'
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary'
+  @Input() disabled: boolean = false;
   @Output() buttonClickedEvent = new EventEmitter<void>();
-  hasBeenClicked = false;
+
   constructor() { }
 
   onClick() {
