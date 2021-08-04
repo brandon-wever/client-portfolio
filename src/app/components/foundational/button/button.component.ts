@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'fc-button',
@@ -9,7 +10,13 @@ export class ButtonComponent implements OnInit {
 
   @Input() label: string = 'Button Label'
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary'
+  @Output() buttonClickedEvent = new EventEmitter<void>();
+  hasBeenClicked = false;
   constructor() { }
+
+  onClick() {
+    this.buttonClickedEvent.emit();
+  }
 
   ngOnInit(): void {
   }

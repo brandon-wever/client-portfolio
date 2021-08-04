@@ -12,4 +12,12 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onFormSubmit(){
+    console.log('submit button was clicked');
+  }
+
+  onFormCancel(){
+    console.log('cancel button was clicked');
+  }
+
 }
