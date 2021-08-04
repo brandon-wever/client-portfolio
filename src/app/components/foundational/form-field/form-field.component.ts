@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'fc-form-field',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-field.component.scss']
 })
 export class FormFieldComponent implements OnInit {
+
+  @Input() label: string = 'Input Form Label';
+  @Input() placeholder: string = 'Placeholder';
+
   // https://material.angular.io/components/form-field/examples
   constructor() { }
 
