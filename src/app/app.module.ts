@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from './components/foundational/button/button.module';
 import { LoginPageModule } from './components/application/login-page/login-page.module';
 import { HomePageModule } from './components/application/home-page/home-page.module';
+import { AuthenticationService } from './services/authentication.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { HomePageModule } from './components/application/home-page/home-page.mod
     BrowserAnimationsModule,
     ButtonModule,
     LoginPageModule,
-    HomePageModule
+    HomePageModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ AuthenticationService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
