@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from './components/foundational/button/button.module';
 import { LoginPageModule } from './components/application/login-page/login-page.module';
+import { HomePageModule } from './components/application/home-page/home-page.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoginPageModule } from './components/application/login-page/login-page.
     AppRoutingModule,
     BrowserAnimationsModule,
     ButtonModule,
-    LoginPageModule
+    LoginPageModule,
+    HomePageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
