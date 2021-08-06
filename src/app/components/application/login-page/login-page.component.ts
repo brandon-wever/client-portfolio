@@ -29,8 +29,6 @@ export class LoginPageComponent implements OnInit {
   get password() { return this.loginForm.get('password'); }
 
   onFormSubmit() {
-    console.log('submit button was clicked');
-    console.log(this.loginForm.value);
     if (!this.loginForm.valid) {
       return;
     }
@@ -39,8 +37,7 @@ export class LoginPageComponent implements OnInit {
     this.authenticationService.login(this.loginForm.value.email, this.loginForm.value.password).pipe(take(1)).subscribe(
       // Successful
       (user) => {
-        console.log(user);
-        this.router.navigate(['home']);
+        this.router.navigate(['']);
       },
       // Error callback
       (error) => {
@@ -50,6 +47,7 @@ export class LoginPageComponent implements OnInit {
         } else {
           alert('Something is wrong on our end, please try again later!');
         }
+        console.log(error);
       }
     );
   }

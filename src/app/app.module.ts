@@ -9,6 +9,7 @@ import { LoginPageModule } from './components/application/login-page/login-page.
 import { HomePageModule } from './components/application/home-page/home-page.module';
 import { AuthenticationService } from './services/authentication.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminModule } from './components/application/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonModule,
     LoginPageModule,
     HomePageModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule
   ],
   providers: [ AuthenticationService ],
   bootstrap: [AppComponent]
